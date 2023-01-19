@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Confiner
+  - Water
+  - UI
+  - Weapon
+  - Enemy
+  - EnemyWeapon
+  - Player
+  - Pickup
+  - Solid
+  - Deactivated
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Env
+    uniqueID: 1453360107
+    locked: 0
+  - name: Pickup
+    uniqueID: 3252539473
+    locked: 0
+  - name: Weapon
+    uniqueID: 812697783
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
