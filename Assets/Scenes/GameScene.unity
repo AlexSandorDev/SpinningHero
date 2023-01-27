@@ -1408,6 +1408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 610392669}
+  - component: {fileID: 610392670}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -1436,6 +1437,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &610392670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610392668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e2891992997014385ceddfdd802ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToActivate:
+  - {fileID: 1534263757}
+  componentsToActivate:
+  - {fileID: 8379574465386710487}
+  objectsToDeactivate:
+  - {fileID: 1871152350}
 --- !u!1 &624131287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,7 +3576,7 @@ GameObject:
   - component: {fileID: 1534263758}
   - component: {fileID: 1534263759}
   m_Layer: 0
-  m_Name: SpawnArea
+  m_Name: EnemySpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4970,6 +4989,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7681854842955921683, guid: 40d189d1f83ff9f4a8b44808d09e7c70, type: 3}
   m_PrefabInstance: {fileID: 8379574465386710485}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8379574465386710487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8379574465856214393, guid: 40d189d1f83ff9f4a8b44808d09e7c70, type: 3}
+  m_PrefabInstance: {fileID: 8379574465386710485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42398c02d0ac68441a212824513cf60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8808196545032934025
 PrefabInstance:
   m_ObjectHideFlags: 0
