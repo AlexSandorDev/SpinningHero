@@ -22,8 +22,8 @@ public class TutorialUI : MonoBehaviour
 
 	void StartGame()
 	{
-		objectsToActivate.ForEach(x => x.SetActive(true));
+		objectsToActivate.ForEach(x => x?.SetActive(true));
 		componentsToActivate.ForEach(x => x.enabled = true);
-		objectsToDeactivate.ForEach(x => x.SetActive(false));
+		objectsToDeactivate.ForEach(x => x?.SetActive(false));
 	}
 }
