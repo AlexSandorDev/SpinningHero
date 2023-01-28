@@ -295,8 +295,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285477683
-  m_fontColor: {r: 0.19855823, g: 0.19855823, b: 0.4339623, a: 1}
+    rgba: 4279124407
+  m_fontColor: {r: 0.7176471, g: 0.25490198, b: 0.054901965, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1642,7 +1642,7 @@ GameObject:
   - component: {fileID: 756751679}
   - component: {fileID: 756751678}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1711,7 +1711,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 756751679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 886816154}
+        m_TargetAssemblyTypeName: GameOverMenu, Scripts
+        m_MethodName: Home
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &756751679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4643,8 +4655,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287578690
-  m_fontColor: {r: 0.25882354, g: 0.25882354, b: 0.56078434, a: 1}
+    rgba: 4278794404
+  m_fontColor: {r: 0.6431373, g: 0.21960786, b: 0.03529412, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
