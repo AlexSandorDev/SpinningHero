@@ -9,6 +9,7 @@ public class GameOverMenu : MonoBehaviour
 	void Start()
 	{
 		GameManager.playerTransform.GetComponent<PlayerHealth>().OnPlayerDeath += OpenGameOverMenuOnEvent;
+		menu.SetActive(false);
 	}
 
 	void OpenGameOverMenuOnEvent(object sender, EventArgs args)
