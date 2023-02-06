@@ -12,7 +12,7 @@ public class TutorialUI : MonoBehaviour
 	{
 		objectsToActivate.ForEach(x => x.SetActive(false));
 		componentsToActivate.ForEach(x => x.enabled = false);
-		objectsToDeactivate.ForEach(x => x.SetActive(true));
+		objectsToDeactivate?.ForEach(x => x.SetActive(true));
 	}
 
 	void Update()
@@ -24,6 +24,6 @@ public class TutorialUI : MonoBehaviour
 	{
 		objectsToActivate.ForEach(x => x?.SetActive(true));
 		componentsToActivate.ForEach(x => x.enabled = true);
-		objectsToDeactivate.ForEach(x => x?.SetActive(false));
+		objectsToDeactivate?.ForEach(x => x?.SetActive(false));
 	}
 }

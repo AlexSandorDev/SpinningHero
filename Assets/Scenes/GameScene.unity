@@ -1466,8 +1466,7 @@ MonoBehaviour:
   - {fileID: 1534263757}
   componentsToActivate:
   - {fileID: 8379574465386710487}
-  objectsToDeactivate:
-  - {fileID: 1871152350}
+  objectsToDeactivate: []
 --- !u!1 &624131287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,7 +1791,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outTrigger: Out
   inTrigger: In
-  timeAfterPress: 5
 --- !u!1 &756751676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,6 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 1912295436}
   canvasAnim: {fileID: 281126539}
+  transition: {fileID: 0}
 --- !u!1 &957075468
 GameObject:
   m_ObjectHideFlags: 0

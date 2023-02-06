@@ -12,6 +12,7 @@ public class GameOverMenu : MonoBehaviour
     {
         GameManager.playerTransform.GetComponent<PlayerHealth>().OnPlayerDeath += OpenGameOverMenuOnEvent;
         menu.SetActive(false);
+        OpenGameOverMenu();
     }
 
     void OpenGameOverMenuOnEvent(object sender, EventArgs args)
@@ -39,7 +40,7 @@ public class GameOverMenu : MonoBehaviour
     {
         Task task = transition.In();
 
-        task.Wait();
+        task.Wait(10000);
 
         SceneManager.LoadScene(sceneIndex);
     }
