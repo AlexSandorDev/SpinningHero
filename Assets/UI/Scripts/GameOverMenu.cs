@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,11 +7,11 @@ public class GameOverMenu : MonoBehaviour
     [SerializeField] GameObject menu;
     [SerializeField] Animator canvasAnim;
     [SerializeField] Transition transition;
+
     void Start()
     {
         GameManager.playerTransform.GetComponent<PlayerHealth>().OnPlayerDeath += OpenGameOverMenuOnEvent;
         menu.SetActive(false);
-        OpenGameOverMenu();
     }
 
     void OpenGameOverMenuOnEvent(object sender, EventArgs args)
@@ -36,11 +35,9 @@ public class GameOverMenu : MonoBehaviour
         LoadScene(0);
     }
 
-    void LoadScene(int sceneIndex)
+    async void LoadScene(int sceneIndex)
     {
-        Task task = transition.In();
-
-        task.Wait(10000);
+        await transition.In();
 
         SceneManager.LoadScene(sceneIndex);
     }

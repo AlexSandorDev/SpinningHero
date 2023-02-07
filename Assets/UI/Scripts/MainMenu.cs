@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,25 +7,14 @@ public class MainMenu : MonoBehaviour
 	static Transform parent;
 	[SerializeField] private float timeAfterStart = 1;
 	[SerializeField] private float timeAfterPress = .2f;
-	[SerializeField] Animator transitionAnimator;
+	[SerializeField] Transition transition;
 
 	private void Awake()
 	{
 		parent = transform;
 
-		try
-		{
-			transitionAnimator.SetTrigger("In");
-		}
-		catch (Exception e) when (e is NullReferenceException || e is UnassignedReferenceException)
-		{
-			Debug.LogWarning("No transition animator selected");
-			transitionAnimator = null;
-		}
-
 		StartCoroutine(StartGameCoroutine());
 	}
-
 
 	private IEnumerator StartGameCoroutine()
 	{
@@ -38,19 +25,13 @@ public class MainMenu : MonoBehaviour
 
 	public void Play()
 	{
-		transitionAnimator?.SetTrigger("Out");
-		StartCoroutine(PlayCoroutine());
+		LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	private IEnumerator PlayCoroutine()
+	async void LoadScene(int sceneIndex)
 	{
-		yield return new WaitForSeconds(timeAfterPress);
+		await transition.In();
 
-		var operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-
-		if (operation.isDone)
-		{
-			transitionAnimator?.SetTrigger("In");
-		}
+		SceneManager.LoadScene(sceneIndex);
 	}
 }

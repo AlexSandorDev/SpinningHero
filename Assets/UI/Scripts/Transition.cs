@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Transition : MonoBehaviour
 {
@@ -27,24 +25,10 @@ public class Transition : MonoBehaviour
         anim.SetTrigger(inTrigger);
 
         await isScreenHidden.Task;
-
-        isScreenHidden.SetResult(false);
     }
 
     public void ScreenHidden()
     {
         isScreenHidden.SetResult(true);
-    }
-
-    private IEnumerator InCoroutine(int sceneIndex,float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        //var operation = SceneManager.LoadSceneAsync(sceneIndex);
-
-        /*if (operation.isDone)
-        {
-            Out();
-        }*/
     }
 }
