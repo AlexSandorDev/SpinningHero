@@ -27,18 +27,11 @@ public class GameOverMenu : MonoBehaviour
 
     public void Restart()
     {
-        LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneLoader.LoadScene(SceneManager.GetActiveScene().buildIndex,transition);
     }
 
     public void Home()
     {
-        LoadScene(0);
-    }
-
-    async void LoadScene(int sceneIndex)
-    {
-        await transition.In();
-
-        SceneManager.LoadScene(sceneIndex);
+        SceneLoader.LoadScene(0,transition);
     }
 }

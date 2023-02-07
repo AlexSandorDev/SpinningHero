@@ -25,13 +25,6 @@ public class MainMenu : MonoBehaviour
 
 	public void Play()
 	{
-		LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-	}
-
-	async void LoadScene(int sceneIndex)
-	{
-		await transition.In();
-
-		SceneManager.LoadScene(sceneIndex);
+		SceneLoader.LoadScene(SceneManager.GetActiveScene().buildIndex + 1,transition);
 	}
 }
