@@ -15,7 +15,8 @@ public class Pooling : MonoBehaviour
 
 	public enum PoolTags
 	{
-		Goblin
+		Goblin,
+		Lancer
 	}
 
 	private void Awake()
