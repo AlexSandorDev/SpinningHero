@@ -1109,6 +1109,9 @@ MonoBehaviour:
   tireScreechPitch: 0.5
   maxEngineVol: 1
   minEngineVol: 0.5
+  hitVolume: 0.1
+  hitMinPitch: 0.95
+  hitMaxPitch: 1.05
 --- !u!114 &6517460066819868350
 MonoBehaviour:
   m_ObjectHideFlags: 0
